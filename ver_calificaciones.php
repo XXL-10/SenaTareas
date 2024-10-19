@@ -16,30 +16,33 @@ $result = $conexion->query($query);
 require './inclu/header.php';
 ?>
 <title>Ver Calificaciones</title>
+<link rel="stylesheet" href="calificaciones.css">
 </head>
 <body>
 <?php require './inclu/nav-cerrar1.php'; ?>
 
-<h2>Calificaciones</h2>
+<div class="calificaciones-container">
+    <h2 class="calificaciones-title">Calificaciones</h2>
 
-<table>
-    <thead>
-        <tr>
-            <th>Asunto</th>
-            <th>Calificación</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php while ($row = $result->fetch_assoc()):?>
-        <tr>
-            <td><?php echo $row['asunto']; ?></td>
-            <td><?php echo $row['calificacion'] ? $row['calificacion'] : 'Pendiente'; ?></td>
-        </tr>
+    <table class="calificaciones-table">
+        <thead>
+            <tr>
+                <th>Asunto</th>
+                <th>Calificación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php while ($row = $result->fetch_assoc()): ?>
+            <tr>
+                <td><?php echo $row['asunto']; ?></td>
+                <td><?php echo $row['calificacion'] ? $row['calificacion'] : 'Pendiente'; ?></td>
+            </tr>
+            <?php endwhile; ?>
+        </tbody>
+    </table>
 
-        
-        <?php endwhile; ?>
-    </tbody>
-</table>
+    <a href="panel_aprendiz.php" class="volver-btn">Volver</a>
+</div>
 
 </body>
 </html>

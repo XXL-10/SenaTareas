@@ -31,7 +31,7 @@ require './inclu/header.php';
 <title>Panel Aprendiz</title>
 </head>
 <body>
-<?php require './inclu/nav-cerrar1.php'; ?>
+<?php require './inclu/nav.php'; ?>
 
 <div class="panel-aprendiz-container">
     <h2>Bienvenido, <?php echo htmlspecialchars($nombre_aprendiz); ?></h2> <!-- Sanitizar la salida -->

@@ -21,7 +21,7 @@ require './inclu/header.php';
 <title>Panel Instructor</title>
 </head>
 <body>
-<?php require './inclu/nav-cerrar1.php'; ?>
+<?php require './inclu/nav.php'; ?>
 
 <div class="panel-instructor">
     <h2>Panel de Instructor</h2>
