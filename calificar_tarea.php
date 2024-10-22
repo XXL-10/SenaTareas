@@ -57,25 +57,25 @@ require './inclu/header.php';
 <title>Calificar Tarea</title>
 </head>
 <body>
-<?php require './inclu/nav-cerrar1.php'; ?>
+<?php require './inclu/nav.php'; ?>
 
-<div class="calificar-tarea">
+<div class="calificar-tarea-unique">
     <h2>Calificar Tarea</h2>
     <h3>Asunto: <?php echo htmlspecialchars($tarea['asunto']); ?></h3>
     <p><strong>Contenido:</strong> <?php echo htmlspecialchars($tarea['contenido']); ?></p>
     <p><strong>Aprendiz:</strong> <?php echo htmlspecialchars($tarea['pnombre'] . ' ' . $tarea['papellido']); ?></p>
     
     <?php if (!empty($tarea['archivo'])): ?>
-        <p><strong>Archivo Enviado:</strong> <a href="<?php echo htmlspecialchars($tarea['archivo']); ?>" target="_blank">Descargar Archivo</a></p>
+        <p><strong>Archivo Enviado:</strong> <a class="descargar-archivo-unique" href="<?php echo htmlspecialchars($tarea['archivo']); ?>" target="_blank">Descargar Archivo</a></p>
     <?php else: ?>
         <p>No se ha enviado ningún archivo.</p>
     <?php endif; ?>
 
     <?php if (isset($error)): ?>
-        <p class="error-message"><?php echo htmlspecialchars($error); ?></p>
+        <p class="error-message-unique"><?php echo htmlspecialchars($error); ?></p>
     <?php endif; ?>
 
-    <form method="POST" class="formulario-calificacion">
+    <form method="POST" class="formulario-calificacion-unique">
         <label for="calificacion">Calificación:</label>
         <input type="number" name="calificacion" id="calificacion" min="0" max="5" required>
         <input type="submit" value="Guardar Calificación">

@@ -31,7 +31,7 @@ require './inclu/header.php';
 <title>Panel Aprendiz</title>
 </head>
 <body>
-<?php require './inclu/nav-cerrar1.php'; ?>
+<?php require './inclu/nav.php'; ?>
 
 <form class="formulario-tareas" method="POST" enctype="multipart/form-data">
     <h2>Enviar Tarea</h2>

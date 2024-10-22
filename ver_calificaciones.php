@@ -19,7 +19,7 @@ require './inclu/header.php';
 <link rel="stylesheet" href="calificaciones.css">
 </head>
 <body>
-<?php require './inclu/nav-cerrar1.php'; ?>
+<?php require './inclu/nav.php'; ?>
 
 <div class="calificaciones-container">
     <h2 class="calificaciones-title">Calificaciones</h2>
