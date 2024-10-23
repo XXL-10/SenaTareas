@@ -48,6 +48,8 @@ require './inclu/header.php';
                     <td>
                         <?php if (!$row['calificacion']): ?>
                             <a href="calificar_tarea.php?tarea_id=<?php echo $row['id']; ?>" class="calificar-btn">Calificar</a>
+                        <?php else: ?>
+                            <a href="calificar_tarea.php?tarea_id=<?php echo $row['id']; ?>" class="calificar-btn">Editar</a>
                         <?php endif; ?>
                     </td>
                 </tr>
