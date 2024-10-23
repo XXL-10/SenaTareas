@@ -90,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         echo "Archivo subido exitosamente: " . $destino . "<br>"; // Mensaje de éxito
                         // Actualizar la tabla 'tareas' con la información del archivo
                         $sqlArchivo = "UPDATE tareas 
-                                       SET nombre_archivo = '$nombreArchivo', ruta_archivo = '$destino' 
+                                       SET nombre_archivo = '$nombreArchivo', archivo = '$destino' 
                                        WHERE id = '$tarea_id'";
                         if (!$conexion->query($sqlArchivo)) {
                             $error = true;

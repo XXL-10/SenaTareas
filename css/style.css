@@ -1,0 +1,887 @@
+:root {
+    --primary-color: #0FAA0E;
+    --secondary-color: #f0f0f0;
+    --background-blur: rgba(0, 0, 0, 0.7);
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,*:before , *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 1.6rem;
+    background-color: rgba(39, 165, 39, 0.537);
+}
+
+/* Estilos generales del header */
+.header {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+}
+
+.title {
+    font-size: 1.8em;
+    color: #0FAA0E;
+    font-weight: bold;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.nav {
+    margin-left: auto;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #FF6C20;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #0FAA0E;
+}
+
+
+
+footer{
+    text-align: center;
+    text-transform: capitalize;
+
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+}
+
+/* Estilos generales para ambos formularios */
+.formulario-crear-cuenta,
+.formulario-login {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-family: 'Helvetica Neue', sans-serif;
+    animation: fadeIn 0.6s ease-in-out; /* Animación */
+}
+
+form h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #0FAA0E;
+}
+
+/* Estilos para los fieldset y legend */
+fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+legend {
+    color: #FF6C20;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Estilos para etiquetas y entradas */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover y focus en los inputs */
+input:focus,
+select:focus {
+    border-color: #0FAA0E;
+    box-shadow: 0 0 8px rgba(15, 170, 14, 0.2);
+    outline: none;
+}
+
+/* Botón de envío */
+input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #0FAA0E;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto hover y activo en el botón */
+input[type="submit"]:hover {
+    background-color: #FF6C20;
+}
+
+input[type="submit"]:active {
+    transform: translateY(2px);
+}
+
+/* Estilos de animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Estilos minimalistas para los select */
+select {
+    appearance: none; /* Ocultar el estilo predeterminado */
+    background: #F9F9F9 url('data:image/svg+xml;base64,PHN2ZyB...') no-repeat right 10px center; /* Icono de dropdown */
+    background-size: 12px;
+    cursor: pointer;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .formulario-crear-cuenta,
+    .formulario-login {
+        padding: 20px;
+    }
+    
+    legend {
+        font-size: 1.3em;
+    }
+    
+    input[type="submit"] {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .formulario-crear-cuenta,
+    .formulario-login {
+        padding: 15px;
+    }
+    
+    legend {
+        font-size: 1.1em;
+    }
+
+    input[type="submit"] {
+        font-size: 1em;
+        padding: 12px;
+    }
+}
+
+
+/* Estilos generales del contenedor */
+.container {
+    position: relative;
+    background-image: url(../img/Imagen\ de\ WhatsApp\ 2024-10-03\ a\ las\ 21.57.06_eaa86c99.jpg);
+    background-size: cover;
+    background-position: center;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #f0f0f0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mejora en la tipografía */
+.container h2 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+    line-height: 1.2;
+    position: relative;
+    z-index: 2;
+}
+
+.container .motivational-quote {
+    font-size: 1.6rem;
+    padding: 20px;
+    position: relative;
+    margin-top: 20px;
+    width: 90%;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    color: #f0f0f0;
+    animation: fadeInBlur 2s ease-in-out;
+    z-index: 1;
+}
+
+/* Mejora en la animación */
+@keyframes fadeInBlur {
+    0% {
+        filter: blur(20px);
+        opacity: 0;
+    }
+    100% {
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+/* Enlaces accesibles */
+.container a {
+    color: #0FAA0E;
+    text-decoration: underline;
+}
+
+.container a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Media Query para mejorar la experiencia en dispositivos móviles */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    .container h2 {
+        font-size: 2.2rem;
+    }
+    .motivational-quote {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+}
+
+/* Efecto hover para mayor interactividad */
+.container:hover .motivational-quote {
+    background: rgba(15, 170, 14, 0.85);
+    color: #ffffff;
+    transform: translateY(10px) scale(1.05);
+    transition: transform 0.4s ease, background 0.4s ease;
+}
+
+/* Efectos adicionales para mejorar la interactividad general */
+.container {
+    transition: box-shadow 0.4s ease;
+}
+
+.container:hover {
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3);
+}
+
+.container h2 {
+    color: var(--secondary-color);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+.container .motivational-quote {
+    color: var(--secondary-color);
+    background: var(--background-blur);
+}
+
+
+
+/* Estilos generales del formulario de tareas */
+.formulario-tareas {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-family: 'Helvetica Neue', sans-serif;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.formulario-tareas h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #0FAA0E;
+}
+
+/* Fieldset y legend */
+.formulario-tareas fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+.formulario-tareas legend {
+    color: #FF6C20;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Estilos para las etiquetas y campos */
+.formulario-tareas label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.formulario-tareas input[type="text"],
+.formulario-tareas textarea,
+.formulario-tareas input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    background-color: #F9F9F9;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formulario-tareas textarea {
+    resize: vertical;
+    max-height: 40rem;
+    min-height: 10rem;
+}
+
+/* Efecto hover y focus */
+.formulario-tareas input:focus,
+.formulario-tareas textarea:focus,
+.formulario-tareas input[type="file"]:focus {
+    border-color: #0FAA0E;
+    box-shadow: 0 0 8px rgba(15, 170, 14, 0.2);
+    outline: none;
+}
+
+/* Botón de envío */
+.formulario-tareas input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #0FAA0E;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.formulario-tareas input[type="submit"]:hover {
+    background-color: #FF6C20;
+}
+
+.formulario-tareas input[type="submit"]:active {
+    transform: translateY(2px);
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Estilos específicos para el panel del aprendiz */
+.panel-aprendiz-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Helvetica Neue', sans-serif;
+    animation: fadeInPanel 0.6s ease-in-out;
+}
+
+.panel-aprendiz-container h2 {
+    font-size: 2em;
+    color: #0FAA0E;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Lista de enlaces */
+.panel-aprendiz-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.panel-aprendiz-container ul li {
+    margin-bottom: 15px;
+}
+
+.panel-aprendiz-container ul li a {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #0FAA0E;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.panel-aprendiz-container ul li a:hover {
+    background-color: #FF6C20;
+}
+
+.panel-aprendiz-container ul li a:active {
+    transform: translateY(2px);
+}
+
+/* Animación de aparición */
+@keyframes fadeInPanel {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .panel-aprendiz-container {
+        padding: 15px;
+    }
+
+    .panel-aprendiz-container h2 {
+        font-size: 1.5em;
+    }
+
+    .panel-aprendiz-container ul li a {
+        font-size: 1.1em;
+    }
+}
+
+/* Estilos generales del apartado de calificaciones */
+.calificaciones-container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #e0f8e0;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(15, 170, 14, 0.2);
+    font-family: 'Roboto', sans-serif;
+}
+
+.calificaciones-title {
+    text-align: center;
+    font-size: 2.4em;
+    color: #0FAA0E;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.calificaciones-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.calificaciones-table th, .calificaciones-table td {
+    border: 1px solid #0FAA0E;
+    padding: 12px;
+    text-align: left;
+    font-size: 1.6rem;
+}
+
+.calificaciones-table th {
+    background-color: #0FAA0E;
+    color: #fff;
+    font-weight: bold;
+}
+
+.calificaciones-table tr:nth-child(even) {
+    background-color: #d8f5d8;
+}
+
+.calificaciones-table tr:hover {
+    background-color: #b8e6b8;
+}
+
+.calificaciones-table td {
+    color: #333;
+}
+
+.volver-btn {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: #0FAA0E;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.volver-btn:hover {
+    background-color: #b8e6b8;
+}
+
+.volver-btn:active {
+    transform: translateY(2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .calificaciones-container {
+        padding: 15px;
+    }
+
+    .calificaciones-title {
+        font-size: 2em;
+    }
+
+    .calificaciones-table th, .calificaciones-table td {
+        font-size: 1.4rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calificaciones-title {
+        font-size: 1.8em;
+    }
+
+    .calificaciones-table th, .calificaciones-table td {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+}
+
+
+
+
+/* Estilos para el panel de instructor */
+.panel-instructor {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.6s ease-in-out;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Títulos */
+.panel-instructor h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #0FAA0E;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la tabla */
+.panel-instructor .tareas-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    min-width: 600px;
+    overflow-x: auto;
+    display: block;
+    justify-items: center;
+}
+
+.panel-instructor .tareas-table th,
+.panel-instructor .tareas-table td {
+    border: 1px solid #E0E0E0;
+    padding: 12px;
+    text-align: left;
+    font-size: 1.4rem;
+}
+
+.panel-instructor .tareas-table th {
+    background-color: #0FAA0E;
+    color: #fff;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.panel-instructor .tareas-table tr:nth-child(even) {
+    background-color: #d8f5d8;
+}
+
+.panel-instructor .tareas-table tr:hover {
+    background-color: #b8e6b8;
+}
+
+/* Botones de calificación */
+.panel-instructor .calificar-btn {
+    background-color: #0FAA0E;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.panel-instructor .calificar-btn:hover {
+    background-color: #FF6C20;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .panel-instructor {
+        padding: 15px;
+    }
+
+    .panel-instructor h2 {
+        font-size: 1.8em;
+    }
+
+    .panel-instructor .tareas-table th,
+    .panel-instructor .tareas-table td {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+
+    .panel-instructor .calificar-btn {
+        padding: 8px 12px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .panel-instructor h2 {
+        font-size: 1.6em;
+    }
+
+    .panel-instructor .tareas-table th,
+    .panel-instructor .tareas-table td {
+        font-size: 1rem;
+        padding: 6px;
+    }
+
+    .panel-instructor .calificar-btn {
+        padding: 6px 10px;
+        font-size: 1rem;
+    }
+
+    .panel-instructor {
+        margin: 20px auto;
+    }
+}
+
+/* Contenedor de calificación */
+.calificar-tarea-unique {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #e0f8e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(15, 170, 14, 0.2);
+    font-family: 'Roboto', sans-serif;
+}
+
+.calificar-tarea-unique h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #0FAA0E;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.calificar-tarea-unique p {
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.error-message-unique {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.descargar-archivo-unique {
+    text-decoration: none;
+    color: #FF6C20;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.descargar-archivo-unique:hover {
+    color: #0FAA0E;
+}
+
+/* Formularios */
+.formulario-calificacion-unique {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-family: 'Helvetica Neue', sans-serif;
+    animation: fadeIn-unique 0.6s ease-in-out;
+}
+
+.formulario-calificacion-unique label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.formulario-calificacion-unique input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    background-color: #F9F9F9;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formulario-calificacion-unique input[type="number"]:focus {
+    border-color: #0FAA0E;
+    box-shadow: 0 0 8px rgba(15, 170, 14, 0.2);
+    outline: none;
+}
+
+.formulario-calificacion-unique input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #0FAA0E;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.formulario-calificacion-unique input[type="submit"]:hover {
+    background-color: #FF6C20;
+}
+
+.formulario-calificacion-unique input[type="submit"]:active {
+    transform: translateY(2px);
+}
+
+/* Animación */
+@keyframes fadeIn-unique {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .calificar-tarea-unique {
+        padding: 15px;
+    }
+    .calificar-tarea-unique h2 {
+        font-size: 1.8em;
+    }
+    .formulario-calificacion-unique input[type="submit"] {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .calificar-tarea-unique {
+        padding: 10px;
+    }
+    .calificar-tarea-unique h2 {
+        font-size: 1.6em;
+    }
+    .formulario-calificacion-unique input[type="submit"] {
+        font-size: 1em;
+        padding: 12px;
+    }
+}

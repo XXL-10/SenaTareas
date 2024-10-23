@@ -77,7 +77,7 @@ require './inclu/header.php';
 
     <form method="POST" class="formulario-calificacion-unique">
         <label for="calificacion">Calificación:</label>
-        <input type="number" name="calificacion" id="calificacion" min="0" max="5" required>
+        <input type="number" name="calificacion" id="calificacion" min="0" max="5" step="0.1" required>
         <input type="submit" value="Guardar Calificación">
     </form>
 </div>

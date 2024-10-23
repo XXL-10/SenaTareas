@@ -5,10 +5,8 @@
 <body>
 
     <?php require './inclu/nav.php'; ?>
-
     <main class="container">
-        <h2>Programacion De Software</h2>
-        <img src="./img/Imagen de WhatsApp 2024-10-03 a las 21.57.06_eaa86c99.jpg" alt="">
+        <h2>Programación De Software</h2>
+        <p class="motivational-quote">"El único límite para lograr nuestros sueños es nuestra propia determinación."</p>
     </main>
-
     <?php require './inclu/footer.php'; ?>
